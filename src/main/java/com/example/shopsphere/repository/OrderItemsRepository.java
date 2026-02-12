@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.shopsphere.entity.OrderItems;
 
-public interface OrderItemsRepository extends JpaRepository<OrderItems, Integer> {
+public interface OrderItemsRepository extends JpaRepository<OrderItems, Long> {
     
 }
