@@ -13,7 +13,8 @@ public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name="address_id")
+    private Long addressId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -81,12 +82,12 @@ public class Address {
         this.pincode = pincode;
     }
 
-    public Long getId() {
-        return id;
+    public Long getAddressId() {
+        return addressId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setAddressId(Long addressId) {
+        this.addressId = addressId;
     }
 
 }

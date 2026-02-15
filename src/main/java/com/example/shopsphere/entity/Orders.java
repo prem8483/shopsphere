@@ -22,20 +22,27 @@ public class Orders {
     @ManyToOne
     @JoinColumn( name = "user_id")
     private Users users;
-
+    
     @Column( name = "total_price")
     private double totalPrice;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus status;
+    private OrderStatus orderStatus;
 
     @Column( name = "order_date")
     private LocalDateTime orderDate;
 
+    @ManyToOne
+    @JoinColumn( name = "address_id")
+    private Address address;
+    
+    private String paymentStatus;
+    private String paymentMethod;
+    
     public Orders ( ) {
-
+        
     }
-
+    
     public double getTotalPrice() {
         return totalPrice;
     }
@@ -51,15 +58,15 @@ public class Orders {
     public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
     }
-
+    
     public Users getUsers() {
         return users;
     }
-
+    
     public void setUsers(Users users) {
         this.users = users;
     }
-
+    
     public Long getId() {
         return id;
     }
@@ -68,12 +75,35 @@ public class Orders {
         this.id = id;
     }
 
-    public OrderStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(OrderStatus status) {
-        this.status = status;
+    public Address getAddress() {
+        return address;
     }
     
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+    
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+    
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+    
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+    
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+    
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+    
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
 }
