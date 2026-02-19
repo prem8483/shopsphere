@@ -16,11 +16,11 @@ public class OrderItems {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Orders orders;
+    private Orders order;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    private Products products;
+    private Products product;
 
     private int quantity;
     private double price;
@@ -29,20 +29,20 @@ public class OrderItems {
 
     }
 
-    public Orders getOrders() {
-        return orders;
+    public Orders getOrder() {
+        return order;
     }
 
-    public void setOrders(Orders orders) {
-        this.orders = orders;
+    public void setOrder(Orders order) {
+        this.order = order;
     }
 
-    public Products getProducts() {
-        return products;
+    public Products getProduct() {
+        return product;
     }
 
-    public void setProducts(Products products) {
-        this.products = products;
+    public void setProduct(Products product) {
+        this.product = product;
     }
 
     public int getQuantity() {

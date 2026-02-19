@@ -21,7 +21,7 @@ public class Orders {
 
     @ManyToOne
     @JoinColumn( name = "user_id")
-    private Users users;
+    private Users user;
     
     @Column( name = "total_price")
     private double totalPrice;
@@ -59,12 +59,12 @@ public class Orders {
         this.orderDate = orderDate;
     }
     
-    public Users getUsers() {
-        return users;
+    public Users getUser() {
+        return user;
     }
     
-    public void setUsers(Users users) {
-        this.users = users;
+    public void setUser(Users user) {
+        this.user = user;
     }
     
     public Long getId() {
