@@ -35,6 +35,6 @@ public class OrderItemsService {
             throw new RuntimeException("Unauthorized order access");
         }
 
-        return orderItemsRepository.findByOrders( order );
+        return orderItemsRepository.findByOrder( order );
     }
 }

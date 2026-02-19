@@ -32,8 +32,8 @@ public class CartService {
 
         Cart cart = new Cart();
 
-        cart.setUsers(users);
-        cart.setProducts(products);
+        cart.setUser(users);
+        cart.setProduct(products);
         cart.setQuantity(quantity);
 
         return cartRepository.save(cart);
@@ -43,7 +43,7 @@ public class CartService {
 
         Users users = usersRepository.findByEmail(email).orElseThrow(()-> new RuntimeException("User not found"));
 
-        return cartRepository.findByUsers(users);
+        return cartRepository.findByUser(users);
     }
 
     public void removeFromCart( Long cartId ) {

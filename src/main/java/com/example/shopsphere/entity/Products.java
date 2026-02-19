@@ -20,7 +20,7 @@ public class Products {
     private String name;
     private String description;
     private double price;
-    private String stock;
+    private int stock;
 
     @Column( name = "image_url")
     private String imageUrl;
@@ -60,13 +60,7 @@ public class Products {
         this.price = price;
     }
 
-    public String getStock() {
-        return stock;
-    }
-
-    public void setStock(String stock) {
-        this.stock = stock;
-    }
+    
 
     public String getImageUrl() {
         return imageUrl;
@@ -100,6 +94,14 @@ public class Products {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
     

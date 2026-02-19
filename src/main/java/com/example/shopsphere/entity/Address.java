@@ -18,8 +18,9 @@ public class Address {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Users users;
+    private Users user;
 
+    private String street;
     private String city;
     private String state;
     private String country;
@@ -66,14 +67,6 @@ public class Address {
         this.addressLine = addressLine;
     }
 
-    public Users getUsers() {
-        return users;
-    }
-
-    public void setUsers(Users users) {
-        this.users = users;
-    }
-
     public String getPincode() {
         return pincode;
     }
@@ -89,5 +82,23 @@ public class Address {
     public void setAddressId(Long addressId) {
         this.addressId = addressId;
     }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    
 
 }

@@ -9,5 +9,5 @@ import com.example.shopsphere.entity.Orders;
 
 public interface OrderItemsRepository extends JpaRepository<OrderItems, Long> {
     
-    List<OrderItems> findByOrders( Orders order );
+    List<OrderItems> findByOrder( Orders order );
 }

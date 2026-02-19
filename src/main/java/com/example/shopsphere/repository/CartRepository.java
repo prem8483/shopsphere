@@ -9,5 +9,6 @@ import com.example.shopsphere.entity.Users;
 
 public interface CartRepository extends JpaRepository<Cart, Long> {
     
-    List<Cart> findByUsers(Users users);
+    List<Cart> findByUser(Users user);
+
 }
